@@ -283,6 +283,7 @@ class DebRepositoryBuilder:
             subprocess.run(
                 [
                     "reprepro",
+                    "-S",
                     "-b",
                     self.apt_dir,
                     "--keepunusednewfiles",
