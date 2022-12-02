@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM debian:sid
 
 LABEL maintainer="jrandiny <jrandiny@gmail.com>"
 
