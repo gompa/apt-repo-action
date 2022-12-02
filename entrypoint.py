@@ -81,7 +81,7 @@ if __name__ == '__main__':
         shutil.rmtree(github_slug)
 
     git_repo = git.Repo.clone_from(
-        'git://git@github.com/{}.git'.format( github_repo),
+        'https://{}@github.com/{}.git'.format(github_token, github_repo),
         github_slug,
     )
 
