@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:sid
 
 LABEL maintainer="Stefan Meinecke <meinecke@greensec.de>"
 
