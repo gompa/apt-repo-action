@@ -206,14 +206,14 @@ if __name__ == '__main__':
 
     logging.info('-- not Saving changes --')
 
-#     git_repo.config_writer().set_value(
-#         'user', 'email', '{}@users.noreply.github.com'.format(github_user)
-#     )
-
-#     git_repo.git.add('*')
-#     git_repo.index.commit(
-#         '[apt-action] Update apt repo\n\n\napt-action-metadata{}'.format(current_metadata_str)
-#     )
-#     git_repo.git.push('--set-upstream', 'origin', gh_branch)
+    git_repo.config_writer().set_value(
+        'user', 'email', '{}@users.noreply.github.com'.format(github_user)
+    )
+    logging.info(os.listdir())
+    git_repo.git.add('*')
+    git_repo.index.commit(
+        '[apt-action] Update apt repo\n\n\napt-action-metadata{}'.format(current_metadata_str)
+    )
+    git_repo.git.push('--set-upstream', 'origin', gh_branch)
 
     logging.info('-- Done saving changes --')
