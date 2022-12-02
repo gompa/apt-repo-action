@@ -140,7 +140,7 @@ if __name__ == '__main__':
 
 #     key_dir = os.path.join(github_slug, 'public.key')
     gpg = gnupg.GPG()
-    public_import_result = gpg.import_keys(pub_key)
+    public_import_result = gpg.import_keys(key_public)
     public_import_result.ok_reason
     logging.info(public_import_result)
 #     detectPublicKey(gpg, key_dir, key_public)
