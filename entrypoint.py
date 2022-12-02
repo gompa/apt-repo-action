@@ -149,6 +149,8 @@ if __name__ == '__main__':
     private_key_id = private_import_result.results[0]['fingerprint']
 
     logging.info('Public key valid')
+    logging.info(private_import_result.ok_reason)
+    logging.info('Key id: {}'.format(private_import_result))
     logging.info('Key id: {}'.format(private_key_id))
 
     logging.info('-- Done importing key --')
