@@ -12,11 +12,11 @@ def detectPublicKey(gpg, key_dir, pub_key):
 
     logging.debug('Existing public key file exists? {}'.format(key_exists))
 
-    if not key_exists:
-        logging.info('Directory doesn\'t contain public.key trying to import')
-        if pub_key is None:
-            logging.error('Please specify public key for setup')
-            sys.exit(1)
+#     if not key_exists:
+#         logging.info('Directory doesn\'t contain public.key trying to import')
+#         if pub_key is None:
+#             logging.error('Please specify public key for setup')
+#             sys.exit(1)
 
         logging.debug('Trying to import key')
 
