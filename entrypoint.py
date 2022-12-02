@@ -41,7 +41,7 @@ if __name__ == '__main__':
 
     supported_arch_list = supported_arch.strip().split('\n')
     supported_version_list = supported_version.strip().split('\n')
-    deb_file_path="/home/runner/work/Gkernel/Gkernel/*.deb"
+#     deb_file_path="/home/runner/work/Gkernel/Gkernel/*.deb"
 
     logging.info('filepath')
     logging.info(deb_file_path)
