@@ -292,6 +292,7 @@ class DebRepositoryBuilder:
                     self.config["deb_file_version"],
                     deb_file,
                 ],
+                capture_output=True,
                 check=True,
             )
             self.deb_files_hashes[deb_file] = self.generateHash(deb_file, "sha1")
