@@ -27,10 +27,6 @@ if __name__ == '__main__':
     deb_file_target_version = os.environ.get('INPUT_FILE_TARGET_VERSION')
     github_repo = os.environ.get('GITHUB_REPOSITORY')
     
-    logging.info('env')
-    logging.info(os.environ.get('file'))
-    logging.info(os.environ.get('INPUT_FILE'))
-    logging.info(os.environ.get('FILE'))
     
     gh_branch = os.environ.get('INPUT_PAGE_BRANCH', 'gh-pages')
     apt_folder = os.environ.get('INPUT_REPO_FOLDER', 'repo')
@@ -142,10 +138,12 @@ if __name__ == '__main__':
 
     logging.info('-- Importing key --')
 
-    key_dir = os.path.join(github_slug, 'public.key')
+#     key_dir = os.path.join(github_slug, 'public.key')
     gpg = gnupg.GPG()
-
-    detectPublicKey(gpg, key_dir, key_public)
+    public_import_result = gpg.import_keys(pub_key)
+    public_import_result.ok_reason
+    logging.info(public_import_result)
+#     detectPublicKey(gpg, key_dir, key_public)
     private_key_id = importPrivateKey(gpg, key_private)
 
     logging.info('-- Done importing key --')
