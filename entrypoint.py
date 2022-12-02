@@ -81,7 +81,7 @@ if __name__ == '__main__':
         shutil.rmtree(github_slug)
 
     git_repo = git.Repo.clone_from(
-        'https://{}@github.com/{}.git'.format(github_token, github_repo),
+        'git://git@github.com/{}.git'.format( github_repo),
         github_slug,
     )
 
@@ -187,7 +187,7 @@ if __name__ == '__main__':
     for deb_file in deb_file_path:
         logging.info('Adding {}'.format(deb_file))
         os.system(
-            'reprepro -b {} --export=silent-never includedeb {} {}'.format(
+            'reprepro -S -b {} --export=silent-never includedeb {} {}'.format(
                 apt_dir,
                 deb_file_version,
                 deb_file,
