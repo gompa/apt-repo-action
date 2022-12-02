@@ -294,7 +294,7 @@ class DebRepositoryBuilder:
                 capture_output=True,
                 check=True,
             )
-            loggin.info(output)
+            logging.info(output)
             self.deb_files_hashes[deb_file] = self.generateHash(deb_file, "sha1")
 
         logging.debug("Signing to unlock key on gpg agent")
