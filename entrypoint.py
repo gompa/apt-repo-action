@@ -26,7 +26,12 @@ if __name__ == '__main__':
     deb_file_path = os.environ.get('INPUT_FILE')
     deb_file_target_version = os.environ.get('INPUT_FILE_TARGET_VERSION')
     github_repo = os.environ.get('GITHUB_REPOSITORY')
-
+    
+    logging.info('env')
+    logging.info(os.environ.get('file'))
+    logging.info(os.environ.get('INPUT_FILE'))
+    logging.info(os.environ.get('FILE'))
+    
     gh_branch = os.environ.get('INPUT_PAGE_BRANCH', 'gh-pages')
     apt_folder = os.environ.get('INPUT_REPO_FOLDER', 'repo')
 
