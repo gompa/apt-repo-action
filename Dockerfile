@@ -1,4 +1,4 @@
-FROM ubuntu-latest
+FROM ubuntu:latest
 
 LABEL maintainer="jrandiny <jrandiny@gmail.com>"
 
