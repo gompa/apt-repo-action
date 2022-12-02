@@ -142,9 +142,14 @@ if __name__ == '__main__':
     gpg = gnupg.GPG()
     public_import_result = gpg.import_keys(key_public)
     public_import_result.ok_reason
-    logging.info(public_import_result)
+    logging.info(public_import_result.ok_reason)
+    logging.info('Private key valid')
 #     detectPublicKey(gpg, key_dir, key_public)
-    private_key_id = importPrivateKey(gpg, key_private)
+    private_import_result = gpg.import_keys(key_private) 
+    private_key_id = private_import_result.results[0]['fingerprint']
+
+    logging.info('Public key valid')
+    logging.info('Key id: {}'.format(private_key_id))
 
     logging.info('-- Done importing key --')
 
